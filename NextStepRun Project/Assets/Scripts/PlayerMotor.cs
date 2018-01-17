@@ -7,8 +7,8 @@ public class PlayerMotor : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 moveVector;
-    private float speed = 5.0f;
-    private float jumppwr = 12.0f;
+    private float speed = 10.0f;
+    private float jumppwr = 8.0f;
     private float VerticalVelocity = 0.0f;
     private float Gravity = 30.0f;
 
@@ -21,10 +21,10 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        Player_Move();
     }
     
-    public void Move()
+    public void Player_Move() //irányítás
     {
         moveVector = Vector3.zero;
 
