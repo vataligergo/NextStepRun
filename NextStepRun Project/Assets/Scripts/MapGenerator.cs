@@ -7,7 +7,7 @@ public class MapGenerator : MonoBehaviour {
     public GameObject[] MapParts;
 
     private Transform playerTransform;
-    private float CreateParts = 0.0f;
+    private float CreatePositionZ = 0.0f;
     private float PartLength = 15.0f;
     private int NumberOfPartsOnScreen = 5;
 
@@ -27,7 +27,7 @@ public class MapGenerator : MonoBehaviour {
 	// Update is called once per frame
 	private void Update ()
     {
-        if (playerTransform.position.z > (CreateParts - NumberOfPartsOnScreen * PartLength))
+        if (playerTransform.position.z > (CreatePositionZ - NumberOfPartsOnScreen * PartLength))
         {
             MapGen();
         }
@@ -38,7 +38,7 @@ public class MapGenerator : MonoBehaviour {
         GameObject go;
         go = Instantiate(MapParts[0]) as GameObject;
         go.transform.SetParent(transform);
-        go.transform.position = Vector3.forward * CreateParts;
-        CreateParts += PartLength;
+        go.transform.position = Vector3.forward * CreatePositionZ;
+        CreatePositionZ += PartLength;
     }
 }
