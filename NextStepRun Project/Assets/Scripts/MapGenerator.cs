@@ -9,7 +9,7 @@ public class MapGenerator : MonoBehaviour {
     private Transform playerTransform;
     private float CreatePositionZ = 0.0f;
     private float PartLength = 15.0f;
-    private int NumberOfPartsOnScreen = 5;
+    private int NumberOfPartsOnScreen = 10;
 
 
 
